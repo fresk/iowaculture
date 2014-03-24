@@ -29,9 +29,16 @@
       <div class="content"></div>
 
 
-      <script id="home-template" type="text/vue-template">
-        <div id="home-screen" class="app-screen" v-transition>
-          <img src="img/home.jpg">
+      <script id="login-template" type="text/vue-template">
+        <div id="login-screen" class="app-screen" v-transition>
+          <span class="icon icon-person login-logo"></span>
+          <form>
+            <input type="text" placeholder="Username" v-model="username">
+            <input type="password" placeholder="Password" v-model="password">
+            <button class="btn btn-positive btn-block" v-on="click: login">
+              Log In
+            </button>
+          </form>
         </div>
       </script>
 

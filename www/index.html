@@ -22,23 +22,16 @@
 
     <!-- Make sure all your bars are the first things in your <body> -->
       <header class="bar bar-nav">
-      <h1 class="title">CareForce</h1>
+      <h1 class="title">IowaCulture</h1>
       </header>
 
       <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
       <div class="content"></div>
 
 
-      <script id="login-template" type="text/vue-template">
-        <div id="login-screen" class="app-screen" v-transition>
-          <span class="icon icon-person login-logo"></span>
-          <form>
-            <input type="text" placeholder="Username" v-model="username">
-            <input type="password" placeholder="Password" v-model="password">
-            <button class="btn btn-positive btn-block" v-on="click: login">
-              Log In
-            </button>
-          </form>
+      <script id="home-template" type="text/vue-template">
+        <div id="home-screen" class="app-screen" v-transition>
+          <img src="img/home.jpg">
         </div>
       </script>
 
@@ -72,6 +65,7 @@
       <script type="text/javascript" src="js/lib/jquery.js"></script>
       <script src="/js/lib/ratchet.js"></script>
       <script src="js/lib/underscore.js"></script>
+      <script src="js/data.js"></script>
       <script src="js/lib/vue.js"></script>
       <script src="js/lib/faker.js"></script>
       <script src="js/index.js"></script>

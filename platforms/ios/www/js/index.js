@@ -17,8 +17,8 @@ var app = {
 
 $(function(){       
 
-  var login_screen = new LoginScreen()
-  login_screen.$appendTo(document.querySelector('.content'));
+  var home_screen = new HomeScreen()
+  home_screen.$appendTo(document.querySelector('.content'));
 });
 
 var View = Vue.extend({
@@ -48,13 +48,12 @@ var View = Vue.extend({
 
 });
 
-var LoginScreen = View.extend({
-   template: "#login-template",
+var HomeScreen = View.extend({
+   template: "#hometemplate",
    
    methods: {
     login: function(e){
       e.preventDefault();
-      console.log('login', this.username, this.password);
       this.pushView('ListScreen');
     }
    }

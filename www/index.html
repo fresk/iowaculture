@@ -1,90 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Ratchet template page</title>
-
-    <!-- Sets initial viewport load and disables zooming  -->
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-    <!-- Include the compiled Ratchet CSS -->
-    <link href="css/ratchet.css" rel="stylesheet">
-    <link href="css/ratchet-theme-ios.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css" />
-
-    <!-- Include the compiled Ratchet JS -->
+    <link rel="stylesheet" href="index.css" media="all">
+    <title>freskjs</title>
   </head>
   <body>
-
-    <!-- Make sure all your bars are the first things in your <body> -->
-      <header class="bar bar-nav">
-      <h1 class="title">IowaCulture</h1>
-      </header>
-
-      <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
-      <div class="content"></div>
-
-
-      <script id="login-template" type="text/vue-template">
-        <div id="login-screen" class="app-screen" v-transition>
-          <span class="icon icon-person login-logo"></span>
-          <form>
-            <input type="text" placeholder="Username" v-model="username">
-            <input type="password" placeholder="Password" v-model="password">
-            <button class="btn btn-positive btn-block" v-on="click: login">
-              Log In
-            </button>
-          </form>
-        </div>
-      </script>
-
-
-      <script id="list-template" type="text/vue-template">
-        <div id="list-screen" class="app-screen" v-transition>
-
-        <div class="bar bar-standard ">
-            <input type="search" placeholder="Search">
-        </div>
-
-          <ul class="table-view">
-            <li class="table-view-cell media" v-repeat="items">
-            <a class="navigate-right">
-              <img class="media-object pull-left" src="{{image}}">
-              <div class="media-body">
-                {{name}}
-                <p>{{text}}</p>
-              </div>
-            </a>
-            </li>
-
-          </ul>
-        </div>
-      </script>
-
-
-
-
-      <script type="text/javascript" src="phonegap.js"></script>
-      <script type="text/javascript" src="js/lib/jquery.js"></script>
-      <script src="/js/lib/ratchet.js"></script>
-      <script src="js/lib/underscore.js"></script>
-      <script src="js/data.js"></script>
-      <script src="js/lib/vue.js"></script>
-      <script src="js/lib/faker.js"></script>
-      <script src="js/index.js"></script>
-      <script>
-        function onDeviceReady() {
-          if (parseFloat(window.device.version) === 7.0) {
-            document.body.style.marginTop = "20px";
-          }
-        }
-        document.addEventListener('deviceready', onDeviceReady, false);
-        app.initialize();
-      </script>
-
-    </body>
-  </html>
+    <div id="app"></div>
+    <script src="bundle.js"></script>
+  </body>
+</html>                             
